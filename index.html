@@ -11,91 +11,106 @@
             margin: 0;
             font-family: 'Montserrat', sans-serif;
             background-color: #fdfcfb;
-            color: #2b2522; /* Зробив текст трохи темнішим і контрастнішим */
+            color: #1a1513; /* Максимально чіткий та глибокий колір тексту */
             text-align: center;
             line-height: 1.8;
         }
 
-        /* Атмосферний декоративний розділювач */
+        /* Декоративний розділювач */
         .divider {
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 40px auto;
+            margin: 45px auto;
             max-width: 200px;
         }
         .divider::before, .divider::after {
             content: "";
             flex: 1;
             height: 1px;
-            background: #8c725e; /* Яскравіший кавовий колір */
+            background: #735338; /* Більш насичений золотаво-кавовий */
         }
         .divider-diamond {
             width: 8px;
             height: 8px;
-            background: #8c725e;
+            background: #735338;
             transform: rotate(45deg);
             margin: 0 15px;
         }
 
         .header {
-            padding: 120px 20px 80px 20px; /* Збільшив відступи */
-            background: linear-gradient(to bottom, #ede2d5, #fdfcfb); /* Більш насичений градієнт */
+            padding: 90px 20px 80px 20px;
+            background: linear-gradient(to bottom, #ebdcd0, #fdfcfb); /* Яскравіший весільний градієнт */
+        }
+
+        /* Атмосферний вступний текст з референсу */
+        .intro-text {
+            font-size: 0.95rem;
+            max-width: 520px;
+            margin: 0 auto 45px auto;
+            letter-spacing: 1px;
+            line-height: 1.9;
+            color: #3b3028;
+            font-weight: 400;
+            text-transform: uppercase; /* Робимо витонченими великими літерами, як на фото */
+            font-size: 0.85rem;
         }
 
         .names {
             font-family: 'Alex Brush', cursive;
-            font-size: 4.5rem; /* Трохи більший шрифт */
-            color: #594436; /* Більш насичений, глибокий колір */
-            margin: 0 0 20px 0;
-            text-shadow: 1px 1px 2px rgba(255,255,255,0.9);
+            font-size: 4.8rem; /* Більші та виразніші імена */
+            color: #402e22; /* Насичений глибокий колір */
+            margin: 0 0 15px 0;
         }
 
         .guest-name {
             font-family: 'Alex Brush', cursive;
-            font-size: 3rem;
-            color: #735640; /* Більш яскраве та чітке виділення */
-            margin: 25px 0;
+            font-size: 3.2rem;
+            color: #593f2d;
+            margin: 30px 0;
             display: none;
         }
 
-        .sub-title {
-            font-size: 0.9rem;
-            letter-spacing: 7px;
+        /* Чітке та відокремлене ЗАПРОШЕННЯ НА ВЕСІЛЛЯ */
+        .wedding-invitation-badge {
+            font-size: 1rem;
+            letter-spacing: 8px;
             text-transform: uppercase;
-            color: #8c725e;
-            margin-top: 25px;
-            margin-bottom: 40px;
-            font-weight: 500;
+            color: #735338;
+            margin: 40px auto 20px auto;
+            font-weight: 600;
+            border-top: 1px solid rgba(115, 83, 56, 0.3);
+            border-bottom: 1px solid rgba(115, 83, 56, 0.3);
+            display: inline-block;
+            padding: 10px 20px;
         }
 
-        /* Окремий стильний блок для тексту, щоб нічого не змішувалось */
         .welcome-box {
             background: #ffffff;
-            border: 1px solid #e6d7cb;
+            border: 1px solid #d9c5b6;
             border-radius: 16px;
-            padding: 30px 25px;
+            padding: 35px 25px;
             max-width: 500px;
-            margin: 40px auto 10px auto;
-            box-shadow: 0 8px 20px rgba(140, 114, 94, 0.05);
+            margin: 35px auto 10px auto;
+            box-shadow: 0 10px 30px rgba(115, 83, 56, 0.08);
         }
 
         .welcome-text {
-            font-size: 1.05rem;
+            font-size: 1.1rem;
             margin: 0;
             font-style: italic;
-            color: #473a31;
-            font-weight: 300;
+            color: #2b2018;
+            font-weight: 400;
         }
 
         .scroll-down {
             font-size: 0.75rem;
             letter-spacing: 3px;
             text-transform: uppercase;
-            color: #9c8473;
-            margin: 60px auto 20px auto;
+            color: #735338;
+            margin: 70px auto 20px auto;
             animation: bounce 2.5s infinite;
-            font-weight: 500;
+            font-weight: 600;
         }
 
         @keyframes bounce {
@@ -111,14 +126,14 @@
         }
 
         .date {
-            font-size: 2rem; /* Більша і чіткіша дата */
+            font-size: 2.2rem;
             letter-spacing: 4px;
             font-weight: 400;
-            color: #3d2f26;
+            color: #261b13;
             margin-bottom: 25px;
         }
 
-        /* Countdown Timer - Зробив яскравішим та чіткішим */
+        /* Countdown Timer */
         .timer-container {
             display: flex;
             justify-content: center;
@@ -128,17 +143,17 @@
 
         .timer-block {
             background: #ffffff;
-            padding: 20px 15px;
+            padding: 22px 16px;
             border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(140, 114, 94, 0.08); /* Більш виразна тінь */
+            box-shadow: 0 12px 30px rgba(115, 83, 56, 0.1);
             min-width: 75px;
-            border: 1px solid #e6d7cb; /* Яскравіша рамка */
+            border: 1px solid #d9c5b6;
         }
 
         .timer-num {
-            font-size: 2.2rem;
+            font-size: 2.4rem;
             font-weight: 400;
-            color: #594436; /* Темніший колір цифр */
+            color: #402e22;
             display: block;
             margin-bottom: 2px;
         }
@@ -147,14 +162,14 @@
             font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            color: #8c725e;
-            font-weight: 500;
+            color: #735338;
+            font-weight: 600;
         }
 
         h2 {
             font-family: 'Alex Brush', cursive;
-            font-size: 3.4rem;
-            color: #594436;
+            font-size: 3.6rem;
+            color: #402e22;
             margin-bottom: 30px;
             font-weight: normal;
         }
@@ -169,16 +184,16 @@
             background: #ffffff;
             padding: 30px 25px;
             border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(140, 114, 94, 0.06);
+            box-shadow: 0 12px 30px rgba(115, 83, 56, 0.08);
             text-align: left;
-            border-left: 4px solid #a68b76; /* Товща і яскравіша лінія */
+            border-left: 5px solid #8c684a;
             position: relative;
         }
 
         .time {
             font-weight: 600;
-            color: #594436;
-            font-size: 1.4rem;
+            color: #402e22;
+            font-size: 1.5rem;
             display: block;
             margin-bottom: 8px;
             letter-spacing: 1px;
@@ -188,22 +203,22 @@
         .map-button {
             display: inline-block;
             margin-top: 15px;
-            padding: 9px 20px;
+            padding: 10px 22px;
             font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: #594436;
-            border: 1px solid #a68b76;
+            color: #402e22;
+            border: 2px solid #8c684a;
             border-radius: 30px;
             text-decoration: none;
             transition: all 0.3s ease;
             background-color: transparent;
-            font-weight: 500;
+            font-weight: 600;
         }
         .map-button:hover {
-            background-color: #594436;
+            background-color: #402e22;
             color: #ffffff;
-            border-color: #594436;
+            border-color: #402e22;
         }
 
         /* Colors */
@@ -216,35 +231,44 @@
         }
 
         .color-circle {
-            width: 48px;
-            height: 48px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            border: 2px solid #ffffff; /* Біла рамка, щоб кружечки виділялися */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            border: 2px solid #ffffff;
         }
 
         .footer {
             padding: 100px 20px;
-            background: linear-gradient(to top, #ede2d5, #fdfcfb);
-            font-size: 1.05rem;
-            color: #3d2f26;
+            background: linear-gradient(to top, #ebdcd0, #fdfcfb);
+            font-size: 1.1rem;
+            color: #261b13;
             letter-spacing: 1px;
         }
         .footer strong {
             font-weight: 500;
             display: block;
             margin-top: 12px;
-            font-size: 1.25rem;
-            color: #594436;
+            font-size: 1.35rem;
+            color: #402e22;
         }
     </style>
 </head>
 <body>
 
+    <!-- БЛОК 1: ВІТАЙТЕ + АТМОСФЕРНИЙ ТЕКСТ -->
     <div class="header">
+        <!-- Текст з референсів міняє сприйняття з першої секунди -->
+        <div class="intro-text">
+            Цей непростий час нам вкотре нагадав, як важливо оберігати тих, хто поруч, не відкладати життя на потім, а цінувати коханих, рідних та друзів, разом відчувати безцінні моменти!
+        </div>
+
         <h1 class="names">Володимир & Діана</h1>
+        
         <div id="guestSection" class="guest-name"></div>
-        <div class="sub-title">Запрошення на весілля</div>
+        
+        <!-- Чітко відокремлене запрошення -->
+        <div class="wedding-invitation-badge">Запрошення на весілля</div>
         
         <div class="welcome-box">
             <p class="welcome-text">
@@ -255,10 +279,11 @@
         <div class="scroll-down">Гортайте далі ↓</div>
     </div>
 
+    <!-- БЛОК 2: ТАЙМЕР -->
     <div class="section">
         <div class="divider"><div class="divider-diamond"></div></div>
         <div class="date">22 . 08 . 2026</div>
-        <p style="letter-spacing: 1px; font-weight: 400; font-size: 0.95rem; color: #594436;">До початку нашого свята залишилось:</p>
+        <p style="letter-spacing: 1px; font-weight: 500; font-size: 1rem; color: #402e22;">До початку нашого свята залишилось:</p>
         
         <div class="timer-container">
             <div class="timer-block">
@@ -278,57 +303,62 @@
         <div class="scroll-down">Гортайте далі ↓</div>
     </div>
 
+    <!-- БЛОК 3: ПРОГРАМА -->
     <div class="section">
         <div class="divider"><div class="divider-diamond"></div></div>
         <h2>Програма дня</h2>
         <div class="timeline">
             <div class="timeline-item">
                 <span class="time">13:45</span>
-                <strong style="font-weight: 500; font-size: 1.1rem;">Урочиста церемонія розпису</strong>
-                <p style="margin-bottom: 5px; font-weight: 400; color: #473a31;">Міський РАЦС<br>м. Житомир, Соборна площа, 1</p>
+                <strong style="font-weight: 600; font-size: 1.15rem;">Урочиста церемонія розпису</strong>
+                <p style="margin-bottom: 5px; font-weight: 400; color: #1a1513;">Міський РАЦС<br>м. Житомир, Соборна площа, 1</p>
                 <a href="https://maps.google.com" target="_blank" class="map-button">Відкрити карту</a>
             </div>
             <div class="timeline-item">
                 <span class="time">15:00</span>
-                <strong style="font-weight: 500; font-size: 1.1rem;">Фотосесія з нареченими</strong>
-                <p style="font-weight: 400; color: #473a31;">Час для створення красивих спільних спогадів</p>
+                <strong style="font-weight: 600; font-size: 1.15rem;">Фотосесія з нареченими</strong>
+                <p style="font-weight: 400; color: #1a1513;">Час для створення красивих спільних спогадів</p>
             </div>
             <div class="timeline-item">
                 <span class="time">16:30</span>
-                <strong style="font-weight: 500; font-size: 1.1rem;">Весільний банкет</strong>
-                <p style="margin-bottom: 5px; font-weight: 400; color: #473a31;">Ресторація «Міміно»<br>м. Житомир, вул. Жуйка, 3</p>
+                <strong style="font-weight: 600; font-size: 1.15rem;">Весільний банкет</strong>
+                <p style="margin-bottom: 5px; font-weight: 400; color: #1a1513;">Ресторація «Міміно»<br>м. Житомир, вул. Жуйка, 3</p>
                 <a href="https://maps.google.com" target="_blank" class="map-button">Відкрити карту</a>
             </div>
             <div class="timeline-item">
                 <span class="time">20:30</span>
-                <strong style="font-weight: 500; font-size: 1.1rem;">Святковий торт</strong>
-                <p style="font-weight: 400; color: #473a31;">Солодкий і магічний момент нашого вечора</p>
+                <strong style="font-weight: 600; font-size: 1.15rem;">Святковий торт</strong>
+                <p style="font-weight: 400; color: #1a1513;">Солодкий і магічний момент нашого вечора</p>
             </div>
         </div>
         
         <div class="scroll-down">Гортайте далі ↓</div>
     </div>
 
+    <!-- БЛОК 4: ДРЕС-КОД -->
     <div class="section">
         <div class="divider"><div class="divider-diamond"></div></div>
         <h2>Дрес-код</h2>
-        <p style="font-weight: 400; padding: 0 10px; color: #473a31;">Нам буде надзвичайно приємно, якщо для нашого свята ви оберете вбрання у світлих пастельних тонах або класичному чорному кольорі. Нехай ваші образи будуть ніжними, елегантними та стильними!</p>
+        <p style="font-weight: 400; padding: 0 10px; color: #1a1513;">Нам буде надзвичайно приємно, якщо для нашого свята ви оберете вбрання у світлих пастельних тонах або класичному чорному кольорі. Нехай ваші образи будуть ніжними, елегантними та стильними!</p>
         <div class="color-palette">
             <div class="color-circle" style="background-color: #f7f4ef;"></div>
             <div class="color-circle" style="background-color: #ede6dc;"></div>
             <div class="color-circle" style="background-color: #d1c2b4;"></div>
             <div class="color-circle" style="background-color: #bfaea0;"></div>
-            <div class="color-circle" style="background-color: #1a1a1a;"></div> </div>
+            <div class="color-circle" style="background-color: #000000; box-shadow: 0 4px 15px rgba(0,0,0,0.4);"></div> <!-- Глибокий чорний акцент -->
+        </div>
         
         <div class="scroll-down">Гортайте далі ↓</div>
     </div>
 
+    <!-- БЛОК 5: ПОБАЖАННЯ -->
     <div class="section">
         <div class="divider"><div class="divider-diamond"></div></div>
         <h2>Маленьке побажання</h2>
-        <p style="font-weight: 400; padding: 0 10px; color: #473a31;">Будемо щиро вдячні, якщо замість квітів, які швидко в'януть, ви подаруєте пляшечку вашого улюбленого алкогольного напою, що стане початком нашої сімейної колекції.</p>
+        <p style="font-weight: 400; padding: 0 10px; color: #1a1513;">Будемо щиро вдячні, якщо замість квітів, які швидко в'януть, ви подаруєте пляшечку вашого улюбленого алкогольного напою, що стане початком нашої сімейної колекції.</p>
     </div>
 
+    <!-- ФУТЕР -->
     <div class="footer">
         З нетерпінням чекаємо на зустріч з вами!<br>
         <strong>З любов'ю, Володимир & Діана</strong>
