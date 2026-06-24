@@ -10,42 +10,75 @@
         body {
             margin: 0;
             font-family: 'Montserrat', sans-serif;
-            background-color: #fbf9f6;
-            color: #4a4a4a;
+            background-color: #fdfcfb;
+            color: #3a3532;
             text-align: center;
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
         .header {
-            padding: 80px 20px;
-            background: linear-gradient(to bottom, #f5ebe6, #fbf9f6);
+            padding: 100px 20px 60px 20px;
+            background: linear-gradient(to bottom, #f2ece4, #fdfcfb);
         }
 
         .names {
             font-family: 'Alex Brush', cursive;
-            font-size: 3.5rem;
-            color: #8c786c;
+            font-size: 3.8rem;
+            color: #6e5d53;
             margin: 0 0 10px 0;
         }
 
+        .guest-name {
+            font-family: 'Alex Brush', cursive;
+            font-size: 2.6rem;
+            color: #8c7a6b;
+            margin: 15px 0;
+            display: none;
+        }
+
         .sub-title {
-            font-size: 1rem;
-            letter-spacing: 4px;
+            font-size: 0.9rem;
+            letter-spacing: 5px;
             text-transform: uppercase;
-            color: #a39084;
+            color: #9c8a7c;
+            margin-top: 20px;
+        }
+
+        .welcome-text {
+            font-size: 1.05rem;
+            max-width: 500px;
+            margin: 30px auto 10px auto;
+            font-style: italic;
+            color: #574e48;
+            padding: 0 20px;
+        }
+
+        .scroll-down {
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #b0a195;
+            margin-top: 40px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-8px); }
+            60% { transform: translateY(-4px); }
         }
 
         .section {
-            padding: 50px 20px;
+            padding: 60px 20px;
             max-width: 600px;
             margin: 0 auto;
         }
 
         .date {
-            font-size: 1.5rem;
-            letter-spacing: 2px;
+            font-size: 1.6rem;
+            letter-spacing: 3px;
             font-weight: 400;
-            color: #5c4f46;
+            color: #52463e;
             margin-bottom: 20px;
         }
 
@@ -60,15 +93,16 @@
         .timer-block {
             background: #ffffff;
             padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(110, 93, 83, 0.04);
             min-width: 65px;
+            border: 1px solid #f5f0ea;
         }
 
         .timer-num {
-            font-size: 1.8rem;
+            font-size: 1.9rem;
             font-weight: 500;
-            color: #8c786c;
+            color: #7d6b5e;
             display: block;
         }
 
@@ -76,36 +110,36 @@
             font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: #a39084;
+            color: #9c8a7c;
         }
 
         h2 {
             font-family: 'Alex Brush', cursive;
-            font-size: 2.8rem;
-            color: #8c786c;
-            margin-bottom: 20px;
+            font-size: 3rem;
+            color: #6e5d53;
+            margin-bottom: 25px;
             font-weight: normal;
         }
 
         /* Timeline */
         .timeline {
             margin: 30px 0;
-            position: relative;
         }
 
         .timeline-item {
             margin-bottom: 30px;
             background: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(110, 93, 83, 0.04);
             text-align: left;
+            border-left: 3px solid #c4b5a9;
         }
 
         .time {
             font-weight: 600;
-            color: #8c786c;
-            font-size: 1.2rem;
+            color: #7d6b5e;
+            font-size: 1.25rem;
             display: block;
             margin-bottom: 5px;
         }
@@ -115,21 +149,22 @@
             display: flex;
             justify-content: center;
             gap: 15px;
-            margin-top: 20px;
+            margin-top: 25px;
         }
 
         .color-circle {
             width: 45px;
             height: 45px;
             border-radius: 50%;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            box-shadow: 0 3px 8px rgba(0,0,0,0.04);
         }
 
         .footer {
-            padding: 60px 20px;
-            background: linear-gradient(to top, #f5ebe6, #fbf9f6);
-            font-size: 0.95rem;
-            color: #5c4f46;
+            padding: 80px 20px;
+            background: linear-gradient(to top, #f2ece4, #fdfcfb);
+            font-size: 1rem;
+            color: #52463e;
+            letter-spacing: 1px;
         }
     </style>
 </head>
@@ -137,7 +172,14 @@
 
     <div class="header">
         <h1 class="names">Діана & Володимир</h1>
+        <div id="guestSection" class="guest-name"></div>
         <div class="sub-title">Запрошення на весілля</div>
+        
+        <p class="welcome-text">
+            «Один з найважливіших днів у нашому житті ми хочемо провести в колі найрідніших та найближчих людей. Щиро запрошуємо вас розділити з нами радість створення нашої сім'ї та незабутні моменти цього свята!»
+        </p>
+        
+        <div class="scroll-down">Гортайте далі <br> ↓</div>
     </div>
 
     <div class="section">
@@ -185,11 +227,11 @@
         <h2>Дрес-код</h2>
         <p>Нам буде надзвичайно приємно, якщо для нашого свята ви оберете вбрання у світлих пастельних тонах. Проте не обмежуйте себе занадто блідими відтінками — нехай ваші образи будуть ніжними, але водночас стильними та виразними!</p>
         <div class="color-palette">
-            <div class="color-circle" style="background-color: #f3ece6;"></div>
-            <div class="color-circle" style="background-color: #e8ded4;"></div>
-            <div class="color-circle" style="background-color: #dfd5cb;"></div>
-            <div class="color-circle" style="background-color: #e5e2da;"></div>
-            <div class="color-circle" style="background-color: #f6eee8;"></div>
+            <div class="color-circle" style="background-color: #f7f4ef;"></div>
+            <div class="color-circle" style="background-color: #ede6dc;"></div>
+            <div class="color-circle" style="background-color: #e0d5c8;"></div>
+            <div class="color-circle" style="background-color: #d1c2b4;"></div>
+            <div class="color-circle" style="background-color: #bfaea0;"></div>
         </div>
     </div>
 
@@ -199,11 +241,23 @@
     </div>
 
     <div class="footer">
-        З нетерпінням чекаємо на вас!<br>
-        <strong>Діана & Володимир</strong>
+        З нетерпінням чекаємо на зустріч з вами!<br>
+        <strong>З любов'ю, Діана & Володимир</strong>
     </div>
 
     <script>
+        // Magic Guest Name Logic
+        function getGuestName() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const guestName = urlParams.get('name');
+            if (guestName) {
+                const guestDiv = document.getElementById('guestSection');
+                guestDiv.innerText = decodeURIComponent(guestName);
+                guestDiv.style.display = 'block';
+            }
+        }
+        getGuestName();
+
         // Countdown Timer Logic
         const weddingDate = new Date("Aug 22, 2026 13:45:00").getTime();
 
