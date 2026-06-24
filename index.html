@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Правильний заголовок для красивої підказки при відправці -->
     <title>Запрошення на весілля</title>
     
-    <!-- Налаштування відображення для месенджерів -->
     <meta property="og:title" content="Запрошення на весілля">
     <meta property="og:description" content="Володимир & Діана">
 
@@ -22,75 +20,124 @@
             line-height: 1.6;
         }
 
-        .header {
-            padding: 80px 20px 60px 20px;
-            background-color: #fcfbfa;
+        /* ПЕРША СТОРІНКА — ОБКЛАДИНКА НА ВЕСЬ ЕКРАН */
+        .cover-page {
+            position: relative;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
+            padding: 60px 20px;
             box-sizing: border-box;
+            background-color: #fcfbfa;
         }
 
-        /* Головні імена — тепер строгі, журнальні та величні */
         .main-names {
             font-family: 'Playfair Display', serif;
-            font-size: 2.6rem;
+            font-size: 2.8rem;
             font-weight: 400;
             letter-spacing: 2px;
             color: #211c19;
             line-height: 1.2;
-            margin: 0 0 10px 0;
             text-transform: uppercase;
+            margin-top: 20px;
         }
 
         .ampersand {
             font-family: 'Playfair Display', serif;
-            font-size: 2rem;
+            font-size: 3.2rem;
             font-style: italic;
+            font-weight: 300;
             color: #8c7769;
-            margin: 5px 0;
             display: block;
+            margin: 5px 0;
         }
 
-        /* Атмосферний текст над фото */
-        .intro-text {
-            font-family: 'Playfair Display', serif;
-            font-size: 0.85rem;
-            line-height: 1.8;
-            max-width: 450px;
-            color: #544941;
-            margin: 30px auto;
-            font-style: italic;
-            padding: 0 15px;
-        }
-
-        /* СТИЛЬНЕ ВЕЛИКЕ ФОТО */
-        .hero-photo-container {
+        /* Фотографія як витончена журнальна обкладинка */
+        .cover-photo-container {
             width: 100%;
             max-width: 340px;
-            margin: 20px auto;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+            height: 50vh;
+            margin: 30px auto;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.07);
             border-radius: 4px;
             overflow: hidden;
-            background-color: #ede6dc;
         }
 
-        .hero-photo {
+        .cover-photo {
             width: 100%;
-            display: block;
+            height: 100%;
             object-fit: cover;
+            display: block;
         }
 
-        /* ВІДОКРЕМЛЕНИЙ БЛОК ДЛЯ ІМЕНІ ГОСТЯ */
+        .wedding-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+            color: #8c7769;
+            font-weight: 500;
+        }
+
+        .scroll-hint {
+            font-size: 0.7rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #baaba0;
+            animation: bounce 3s infinite;
+            font-weight: 500;
+            margin-top: 20px;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-5px); }
+        }
+
+        /* ДРУГА СТОРІНКА ТА ІНШІ СЕКЦІЇ */
+        .divider {
+            margin: 0 auto;
+            width: 1px;
+            height: 80px;
+            background: linear-gradient(to bottom, #d9c3b4, transparent);
+        }
+
+        .section {
+            padding: 80px 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        /* Красивий текст запрошення */
+        .invitation-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.05rem;
+            line-height: 2;
+            color: #382f29;
+            max-width: 500px;
+            margin: 0 auto 40px auto;
+            padding: 0 10px;
+        }
+
+        .highlight-text {
+            font-style: italic;
+            color: #8c7769;
+            display: block;
+            margin-top: 15px;
+            font-weight: 500;
+        }
+
+        /* Зона для імені гостя */
         .guest-box {
             display: none;
             border-top: 1px solid rgba(140, 119, 105, 0.2);
             border-bottom: 1px solid rgba(140, 119, 105, 0.2);
-            padding: 12px 25px;
-            margin: 35px auto 25px auto;
-            max-width: 320px;
+            padding: 15px 25px;
+            margin: 40px auto;
+            max-width: 340px;
         }
 
         .guest-prefix {
@@ -110,64 +157,24 @@
             margin: 0;
         }
 
-        /* Напис ЗАПРОШЕННЯ НА ВЕСІЛЛЯ */
-        .wedding-label {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.75rem;
-            letter-spacing: 10px;
-            text-transform: uppercase;
-            color: #8c7769;
-            margin-top: 15px;
-            font-weight: 500;
-        }
-
-        .scroll-hint {
-            font-size: 0.7rem;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            color: #baaba0;
-            margin-top: 50px;
-            animation: bounce 3s infinite;
-            font-weight: 500;
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-5px); }
-        }
-
-        /* Розділювач секцій */
-        .divider {
-            margin: 40px auto;
-            width: 1px;
-            height: 60px;
-            background: linear-gradient(to bottom, #d9c3b4, transparent);
-        }
-
-        .section {
-            padding: 50px 20px;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
         .section-title {
             font-family: 'Playfair Display', serif;
             font-size: 2rem;
             color: #211c19;
-            margin-bottom: 35px;
+            margin-bottom: 40px;
             font-weight: 400;
             letter-spacing: 1px;
         }
 
         .date-display {
             font-family: 'Playfair Display', serif;
-            font-size: 2.4rem;
+            font-size: 2.5rem;
             letter-spacing: 4px;
             color: #211c19;
             margin-bottom: 20px;
         }
 
-        /* Countdown */
+        /* Таймер */
         .timer-container {
             display: flex;
             justify-content: center;
@@ -261,34 +268,42 @@
 </head>
 <body>
 
-    <!-- ГОЛОВНИЙ БЛОК -->
-    <div class="header">
-        <!-- Ваші імена у новому строгому стилі журналу Vogue -->
-        <h1 class="main-names">Володимир <span class="ampersand">and</span> Діана</h1>
+    <!-- ПЕРША СТОРІНКА (ОБКЛАДИНКА) -->
+    <div class="cover-page">
+        <h1 class="main-names">Володимир <span class="ampersand">&</span> Діана</h1>
 
-        <div class="intro-text">
-            Цей непростий час нам вкотре нагадав, як важливо оберігати тих, хто поруч, не відкладати життя на потім, а цінувати коханих, рідних та друзів, разом відчувати безцінні моменти!
-        </div>
-
-        <!-- Контейнер для вашої фотографії з оригінальною назвою -->
-        <div class="hero-photo-container">
-            <img src="IMG_5880.jpeg" alt="Володимир та Діана" class="hero-photo">
+        <div class="cover-photo-container">
+            <img src="IMG_5880.jpeg" alt="Володимир та Діана" class="cover-photo">
         </div>
         
-        <!-- Ідеально відокремлена зона для гостей під фото -->
+        <div>
+            <div class="wedding-label">Запрошення на весілля</div>
+            <div class="scroll-hint">Гортайте далі ↓</div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ДРУГА СТОРІНКА (САМЕ ЗАПРОШЕННЯ) -->
+    <div class="section">
+        <!-- Персональне звернення до гостей -->
         <div id="guestBox" class="guest-box">
             <div class="guest-prefix">Дорогі</div>
             <h2 id="guestSection" class="guest-name"></h2>
         </div>
-        
-        <div class="wedding-label">Запрошення на весілля</div>
+
+        <!-- Ваш новий красивий текст -->
+        <div class="invitation-text">
+            Цей непростий час нам вкотре нагадав, як важливо оберігати тих, хто поруч, не відкладати життя на потім, а цінувати коханих, рідних та друзів.
+            <span class="highlight-text">Ми щиро хочемо розділити цей особливий день разом з вами!</span>
+        </div>
         
         <div class="scroll-hint">Гортайте далі ↓</div>
     </div>
 
     <div class="divider"></div>
 
-    <!-- ТАЙМЕР -->
+    <!-- ТАЙМЕР ПОСТАВЛЕНО СЮДИ -->
     <div class="section">
         <div class="date-display">22 . 08 . 2026</div>
         <p style="letter-spacing: 2px; text-transform: uppercase; font-size: 0.75rem; color: #8c7769; font-weight: 500;">До початку нашого свята:</p>
@@ -399,4 +414,3 @@
     </script>
 </body>
 </html>
-
