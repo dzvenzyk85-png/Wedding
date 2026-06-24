@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Весілля Діани & Володимира</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@300;400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@300;400;500;600&display=swap');
 
         body {
             margin: 0;
@@ -99,10 +99,11 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            text-align: left;
         }
 
         .time {
-            font-weight: 500;
+            font-weight: 600;
             color: #8c786c;
             font-size: 1.2rem;
             display: block;
@@ -124,65 +125,11 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
-        /* RSVP Form */
-        form {
-            background: #ffffff;
-            padding: 30px 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
-            text-align: left;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
-        input[type="text"], select {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 20px;
-            border: 1px border #e1dbd6;
-            border-radius: 6px;
-            box-sizing: border-box;
-            font-family: 'Montserrat', sans-serif;
-            background-color: #fdfcfb;
-        }
-
-        .radio-group {
-            margin-bottom: 20px;
-        }
-
-        .radio-option {
-            margin-bottom: 10px;
-        }
-
-        button {
-            width: 100%;
-            padding: 14px;
-            background-color: #8c786c;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-size: 1rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            cursor: pointer;
-            font-family: 'Montserrat', sans-serif;
-            transition: background 0.3s;
-        }
-
-        button:hover {
-            background-color: #766358;
-        }
-
         .footer {
-            padding: 40px 20px;
-            font-size: 0.85rem;
-            color: #a39084;
-            letter-spacing: 1px;
+            padding: 60px 20px;
+            background: linear-gradient(to top, #f5ebe6, #fbf9f6);
+            font-size: 0.95rem;
+            color: #5c4f46;
         }
     </style>
 </head>
@@ -218,38 +165,67 @@
         <div class="timeline">
             <div class="timeline-item">
                 <span class="time">13:45</span>
-                <strong>Урочистий розпис</strong>
-                <p>Міський РАЦС, м. Житомир</p>
+                <strong>Урочиста церемонія розпису</strong>
+                <p>Міський РАЦС<br>м. Житомир, Соборна площа, 1</p>
             </div>
             <div class="timeline-item">
                 <span class="time">16:30</span>
-                <strong>Святковий банкет</strong>
-                <p>Ресторація "Міміно", м. Житомир</p>
+                <strong>Весільний банкет</strong>
+                <p>Ресторація «Міміно»<br>м. Житомир, вул. Жуйка, 3</p>
+            </div>
+            <div class="timeline-item">
+                <span class="time">20:30</span>
+                <strong>Святковий торт</strong>
+                <p>Солодкий момент нашого вечора</p>
             </div>
         </div>
-    </div>
-
-    <div class="section">
-        <h2>Побажання</h2>
-        <p>Будемо щиро вдячні, якщо замість квітів, які швидко в'януть, ви подаруєте пляшечку вашого улюбленого алкогольного напою для нашої майбутньої сімейної колекції.</p>
     </div>
 
     <div class="section">
         <h2>Дрес-код</h2>
-        <p>Нам буде надзвичайно приємно, якщо ви підтримаєте колірну гаму нашого весілля у своїх образах (бажано обирати світлі, пастельні відтінки):</p>
+        <p>Нам буде надзвичайно приємно, якщо для нашого свята ви оберете вбрання у світлих пастельних тонах. Проте не обмежуйте себе занадто блідими відтінками — нехай ваші образи будуть ніжними, але водночас стильними та виразними!</p>
         <div class="color-palette">
             <div class="color-circle" style="background-color: #f3ece6;"></div>
-            <div class="color-circle" style="background-color: #e5dcd5;"></div>
-            <div class="color-circle" style="background-color: #dcd3cb;"></div>
-            <div class="color-circle" style="background-color: #ebe7e0;"></div>
-            <div class="color-circle" style="background-color: #f4ede8;"></div>
+            <div class="color-circle" style="background-color: #e8ded4;"></div>
+            <div class="color-circle" style="background-color: #dfd5cb;"></div>
+            <div class="color-circle" style="background-color: #e5e2da;"></div>
+            <div class="color-circle" style="background-color: #f6eee8;"></div>
         </div>
     </div>
 
     <div class="section">
-        <h2>Підтвердження присутності</h2>
-        <p>Будь ласка, підтвердіть вашу присутність до 1 серпня 2026 року, щоб ми могли краще підготуватися до свята.</p>
-        
-        <form>
-            <label for="name">Ваше Ім'я та Прізвище:</label>
-            <input type="text" id="name" name="name"
+        <h2>Маленьке побажання</h2>
+        <p>Будемо щиро вдячні, якщо замість квітів, які швидко в'януть, ви подаруєте пляшечку вашого улюбленого алкогольного напою, що стане початком нашої сімейної колекції.</p>
+    </div>
+
+    <div class="footer">
+        З нетерпінням чекаємо на вас!<br>
+        <strong>Діана & Володимир</strong>
+    </div>
+
+    <script>
+        // Countdown Timer Logic
+        const weddingDate = new Date("Aug 22, 2026 13:45:00").getTime();
+
+        const timer = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+            document.getElementById("days").innerHTML = days < 10 ? "0" + days : days;
+            document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
+            document.getElementById("minutes").innerHTML = minutes < 10 ? "0" + minutes : minutes;
+
+            if (distance < 0) {
+                clearInterval(timer);
+                document.getElementById("days").innerHTML = "00";
+                document.getElementById("hours").innerHTML = "00";
+                document.getElementById("minutes").innerHTML = "00";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
