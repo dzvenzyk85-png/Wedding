@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Весілля Діани & Володимира</title>
+    <title>Весілля Володимира & Діани</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@300;400;500;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@200;300;400;500;600&display=swap');
 
         body {
             margin: 0;
@@ -13,53 +13,80 @@
             background-color: #fdfcfb;
             color: #3a3532;
             text-align: center;
-            line-height: 1.7;
+            line-height: 1.8;
+        }
+
+        /* Атмосферний декоративний розділювач */
+        .divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 40px auto;
+            max-width: 200px;
+            opacity: 0.6;
+        }
+        .divider::before, .divider::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: #9c8a7c;
+        }
+        .divider-diamond {
+            width: 8px;
+            height: 8px;
+            background: #9c8a7c;
+            transform: rotate(45deg);
+            margin: 0 15px;
         }
 
         .header {
-            padding: 100px 20px 60px 20px;
+            padding: 120px 20px 60px 20px;
             background: linear-gradient(to bottom, #f2ece4, #fdfcfb);
         }
 
         .names {
             font-family: 'Alex Brush', cursive;
-            font-size: 3.8rem;
+            font-size: 4.2rem;
             color: #6e5d53;
             margin: 0 0 10px 0;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
         }
 
         .guest-name {
             font-family: 'Alex Brush', cursive;
-            font-size: 2.6rem;
+            font-size: 2.8rem;
             color: #8c7a6b;
-            margin: 15px 0;
+            margin: 20px 0;
             display: none;
         }
 
         .sub-title {
-            font-size: 0.9rem;
-            letter-spacing: 5px;
+            font-size: 0.85rem;
+            letter-spacing: 6px;
             text-transform: uppercase;
             color: #9c8a7c;
             margin-top: 20px;
+            font-weight: 400;
         }
 
         .welcome-text {
             font-size: 1.05rem;
             max-width: 500px;
-            margin: 30px auto 10px auto;
+            margin: 40px auto 20px auto;
             font-style: italic;
             color: #574e48;
             padding: 0 20px;
+            font-weight: 300;
         }
 
         .scroll-down {
-            font-size: 0.8rem;
-            letter-spacing: 2px;
+            font-size: 0.75rem;
+            letter-spacing: 3px;
             text-transform: uppercase;
             color: #b0a195;
-            margin-top: 40px;
-            animation: bounce 2s infinite;
+            margin: 50px auto 20px auto;
+            animation: bounce 2.5s infinite;
+            font-weight: 400;
         }
 
         @keyframes bounce {
@@ -69,17 +96,17 @@
         }
 
         .section {
-            padding: 60px 20px;
+            padding: 50px 20px;
             max-width: 600px;
             margin: 0 auto;
         }
 
         .date {
-            font-size: 1.6rem;
-            letter-spacing: 3px;
-            font-weight: 400;
+            font-size: 1.8rem;
+            letter-spacing: 4px;
+            font-weight: 300;
             color: #52463e;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         /* Countdown Timer */
@@ -87,37 +114,38 @@
             display: flex;
             justify-content: center;
             gap: 15px;
-            margin: 30px 0;
+            margin: 35px 0;
         }
 
         .timer-block {
             background: #ffffff;
-            padding: 15px;
-            border-radius: 12px;
-            box-shadow: 0 6px 15px rgba(110, 93, 83, 0.04);
-            min-width: 65px;
+            padding: 18px 12px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(110, 93, 83, 0.05);
+            min-width: 70px;
             border: 1px solid #f5f0ea;
         }
 
         .timer-num {
-            font-size: 1.9rem;
-            font-weight: 500;
+            font-size: 2rem;
+            font-weight: 300;
             color: #7d6b5e;
             display: block;
+            margin-bottom: 2px;
         }
 
         .timer-label {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             color: #9c8a7c;
         }
 
         h2 {
             font-family: 'Alex Brush', cursive;
-            font-size: 3rem;
+            font-size: 3.2rem;
             color: #6e5d53;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             font-weight: normal;
         }
 
@@ -127,21 +155,44 @@
         }
 
         .timeline-item {
-            margin-bottom: 30px;
+            margin-bottom: 35px;
             background: #ffffff;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 6px 15px rgba(110, 93, 83, 0.04);
+            padding: 30px 25px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(110, 93, 83, 0.05);
             text-align: left;
             border-left: 3px solid #c4b5a9;
+            position: relative;
         }
 
         .time {
-            font-weight: 600;
+            font-weight: 500;
             color: #7d6b5e;
-            font-size: 1.25rem;
+            font-size: 1.3rem;
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        /* Кнопки карт */
+        .map-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 18px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #7d6b5e;
+            border: 1px solid #c4b5a9;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            background-color: transparent;
+        }
+        .map-button:hover {
+            background-color: #7d6b5e;
+            color: #ffffff;
+            border-color: #7d6b5e;
         }
 
         /* Colors */
@@ -149,29 +200,37 @@
             display: flex;
             justify-content: center;
             gap: 15px;
-            margin-top: 25px;
+            margin-top: 30px;
         }
 
         .color-circle {
-            width: 45px;
-            height: 45px;
+            width: 48px;
+            height: 48px;
             border-radius: 50%;
-            box-shadow: 0 3px 8px rgba(0,0,0,0.04);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+            border: 1px solid rgba(0,0,0,0.02);
         }
 
         .footer {
-            padding: 80px 20px;
+            padding: 100px 20px;
             background: linear-gradient(to top, #f2ece4, #fdfcfb);
-            font-size: 1rem;
+            font-size: 1.05rem;
             color: #52463e;
             letter-spacing: 1px;
+        }
+        .footer strong {
+            font-weight: 400;
+            display: block;
+            margin-top: 10px;
+            font-size: 1.15rem;
         }
     </style>
 </head>
 <body>
 
+    <!-- БЛОК 1: ВІТАЙТЕ -->
     <div class="header">
-        <h1 class="names">Діана & Володимир</h1>
+        <h1 class="names">Володимир & Діана</h1>
         <div id="guestSection" class="guest-name"></div>
         <div class="sub-title">Запрошення на весілля</div>
         
@@ -179,12 +238,14 @@
             «Один з найважливіших днів у нашому житті ми хочемо провести в колі найрідніших та найближчих людей. Щиро запрошуємо вас розділити з нами радість створення нашої сім'ї та незабутні моменти цього свята!»
         </p>
         
-        <div class="scroll-down">Гортайте далі <br> ↓</div>
+        <div class="scroll-down">Гортайте далі ↓</div>
     </div>
 
+    <!-- БЛОК 2: ТАЙМЕР -->
     <div class="section">
+        <div class="divider"><div class="divider-diamond"></div></div>
         <div class="date">22 . 08 . 2026</div>
-        <p>До початку нашого свята залишилось:</p>
+        <p style="letter-spacing: 1px; font-weight: 300; font-size: 0.95rem;">До початку нашого свята залишилось:</p>
         
         <div class="timer-container">
             <div class="timer-block">
@@ -200,32 +261,47 @@
                 <span class="timer-label">Хв</span>
             </div>
         </div>
+        
+        <div class="scroll-down">Гортайте далі ↓</div>
     </div>
 
+    <!-- БЛОК 3: ПРОГРАМА -->
     <div class="section">
+        <div class="divider"><div class="divider-diamond"></div></div>
         <h2>Програма дня</h2>
         <div class="timeline">
             <div class="timeline-item">
                 <span class="time">13:45</span>
-                <strong>Урочиста церемонія розпису</strong>
-                <p>Міський РАЦС<br>м. Житомир, Соборна площа, 1</p>
+                <strong style="font-weight: 500;">Урочиста церемонія розпису</strong>
+                <p style="margin-bottom: 5px; font-weight: 300;">Міський РАЦС<br>м. Житомир, Соборна площа, 1</p>
+                <a href="https://maps.google.com/?q=Соборна+площа+1+Житомир+РАЦС" target="_blank" class="map-button">Відкрити карту</a>
+            </div>
+            <div class="timeline-item">
+                <span class="time">15:00</span>
+                <strong style="font-weight: 500;">Фотосесія з нареченими</strong>
+                <p style="font-weight: 300;">Час для створення красивих спільних спогадів</p>
             </div>
             <div class="timeline-item">
                 <span class="time">16:30</span>
                 <strong>Весільний банкет</strong>
-                <p>Ресторація «Міміно»<br>м. Житомир, вул. Жуйка, 3</p>
+                <p style="margin-bottom: 5px; font-weight: 300;">Ресторація «Міміно»<br>м. Житомир, вул. Жуйка, 3</p>
+                <a href="https://maps.google.com/?q=вулиця+Жуйка+3+Житомир+Міміно" target="_blank" class="map-button">Відкрити карту</a>
             </div>
             <div class="timeline-item">
                 <span class="time">20:30</span>
-                <strong>Святковий торт</strong>
-                <p>Солодкий момент нашого вечора</p>
+                <strong style="font-weight: 500;">Святковий торт</strong>
+                <p style="font-weight: 300;">Солодкий і магічний момент нашого вечора</p>
             </div>
         </div>
+        
+        <div class="scroll-down">Гортайте далі ↓</div>
     </div>
 
+    <!-- БЛОК 4: ДРЕС-КОД -->
     <div class="section">
+        <div class="divider"><div class="divider-diamond"></div></div>
         <h2>Дрес-код</h2>
-        <p>Нам буде надзвичайно приємно, якщо для нашого свята ви оберете вбрання у світлих пастельних тонах. Проте не обмежуйте себе занадто блідими відтінками — нехай ваші образи будуть ніжними, але водночас стильними та виразними!</p>
+        <p style="font-weight: 300; padding: 0 10px;">Нам буде надзвичайно приємно, якщо для нашого свята ви оберете вбрання у світлих пастельних тонах. Проте не обмежуйте себе занадто блідими відтінками — нехай ваші образи будуть ніжними, але водночас стильними та виразними!</p>
         <div class="color-palette">
             <div class="color-circle" style="background-color: #f7f4ef;"></div>
             <div class="color-circle" style="background-color: #ede6dc;"></div>
@@ -233,16 +309,21 @@
             <div class="color-circle" style="background-color: #d1c2b4;"></div>
             <div class="color-circle" style="background-color: #bfaea0;"></div>
         </div>
+        
+        <div class="scroll-down">Гортайте далі ↓</div>
     </div>
 
+    <!-- БЛОК 5: ПОБАЖАННЯ -->
     <div class="section">
+        <div class="divider"><div class="divider-diamond"></div></div>
         <h2>Маленьке побажання</h2>
-        <p>Будемо щиро вдячні, якщо замість квітів, які швидко в'януть, ви подаруєте пляшечку вашого улюбленого алкогольного напою, що стане початком нашої сімейної колекції.</p>
+        <p style="font-weight: 300; padding: 0 10px;">Будемо щиро вдячні, якщо замість квітів, які швидко в'януть, ви подаруєте пляшечку вашого улюбленого алкогольного напою, що стане початком нашої сімейної колекції.</p>
     </div>
 
+    <!-- ФУТЕР -->
     <div class="footer">
         З нетерпінням чекаємо на зустріч з вами!<br>
-        <strong>З любов'ю, Діана & Володимир</strong>
+        <strong>З любов'ю, Володимир & Діана</strong>
     </div>
 
     <script>
