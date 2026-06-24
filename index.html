@@ -3,7 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Весілля Володимира & Діани</title>
+    
+    <!-- Правильний заголовок для красивої підказки при відправці -->
+    <title>Запрошення на весілля</title>
+    
+    <!-- Налаштування відображення для месенджерів -->
+    <meta property="og:title" content="Запрошення на весілля">
+    <meta property="og:description" content="Володимир & Діана">
+
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
     <style>
         body {
@@ -80,13 +87,15 @@
             font-weight: 500;
         }
 
+        /* Елегантний та легкий вказівник прокрутки */
         .scroll-hint {
             font-size: 0.7rem;
             letter-spacing: 4px;
             text-transform: uppercase;
             color: #baaba0;
-            margin-top: 80px;
+            margin-top: 60px;
             animation: bounce 3s infinite;
+            font-weight: 500;
         }
 
         @keyframes bounce {
@@ -185,7 +194,7 @@
             border-color: #544941;
         }
 
-        /* Дрес-код палітра з плавним м'яким переходом до чорного */
+        /* Дрес-код палітра */
         .palette {
             display: flex;
             justify-content: center;
@@ -219,24 +228,29 @@
 </head>
 <body>
 
+    <!-- ГОЛОВНИЙ БЛОК -->
     <div class="header">
         <div class="intro-text">
             Цей непростий час нам вкотре нагадав, як важливо оберігати тих, хто поруч, не відкладати життя на потім, а цінувати коханих, рідних та друзів, разом відчувати безцінні моменти!
         </div>
 
+        <!-- Ініціали -->
         <div class="monogram">В & Д</div>
         
+        <!-- Відокремлена зона для імені гостя -->
         <div id="guestBox" class="guest-box">
             <h2 id="guestSection" class="guest-name"></h2>
         </div>
         
         <div class="wedding-label">Запрошення на весілля</div>
         
-        <div class="scroll-hint">Гортайте вниз ↓</div>
+        <!-- Вказівник прокрутки 1 -->
+        <div class="scroll-hint">Гортайте далі ↓</div>
     </div>
 
     <div class="divider"></div>
 
+    <!-- ТАЙМЕР -->
     <div class="section">
         <div class="date-display">22 . 08 . 2026</div>
         <p style="letter-spacing: 2px; text-transform: uppercase; font-size: 0.75rem; color: #8c7769; font-weight: 500;">До початку нашого свята:</p>
@@ -255,10 +269,14 @@
                 <span class="timer-label">хв</span>
             </div>
         </div>
+        
+        <!-- Вказівник прокрутки 2 -->
+        <div class="scroll-hint">Гортайте далі ↓</div>
     </div>
 
     <div class="divider"></div>
 
+    <!-- ПРОГРАМА ДНЯ -->
     <div class="section">
         <h2 class="section-title">Програма дня</h2>
         
@@ -281,10 +299,14 @@
             <p style="color: #4a403a;">Ресторація «Міміно»<br>м. Житомир, вул. Жуйка, 3</p>
             <a href="https://maps.google.com" target="_blank" class="map-btn">Відкрити карту</a>
         </div>
+        
+        <!-- Вказівник прокрутки 3 -->
+        <div class="scroll-hint" style="margin-top: 40px;">Гортайте далі ↓</div>
     </div>
 
     <div class="divider"></div>
 
+    <!-- ДРЕС-КОД -->
     <div class="section">
         <h2 class="section-title">Дрес-код</h2>
         <p style="color: #4a403a; padding: 0 10px;">Нам буде надзвичайно приємно, якщо для нашого свята ви оберете вбрання у світлих пастельних тонах або класичному чорному кольорі.</p>
@@ -294,16 +316,22 @@
             <div class="circle" style="background-color: #e0d5c1;" title="Світлий капучино"></div>
             <div class="circle" style="background-color: #bca895;" title="Глибокий кавовий"></div>
             <div class="circle" style="background-color: #59534e;" title="Темний графіт"></div>
-            <div class="circle" style="background-color: #000000;" title="Чорний класичний"></div> </div>
+            <div class="circle" style="background-color: #000000;" title="Чорний класичний"></div>
+        </div>
+        
+        <!-- Вказівник прокрутки 4 -->
+        <div class="scroll-hint" style="margin-top: 50px;">Гортайте далі ↓</div>
     </div>
 
     <div class="divider"></div>
 
+    <!-- ПОБАЖАННЯ -->
     <div class="section">
         <h2 class="section-title">Маленьке побажання</h2>
         <p style="color: #4a403a;">Будемо щиро вдячні, якщо замість квітів ви подаруєте пляшечку вашого улюбленого алкогольного напою для нашої сімейної колекції.</p>
     </div>
 
+    <!-- ФУТЕР -->
     <div class="footer">
         З нетерпінням чекаємо на зустріч!<br>
         <div class="footer-names">Володимир & Діана</div>
