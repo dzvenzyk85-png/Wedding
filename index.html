@@ -28,7 +28,7 @@
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            padding: 60px 20px;
+            padding: 40px 20px;
             box-sizing: border-box;
             background-color: #fcfbfa;
         }
@@ -41,7 +41,7 @@
             color: #211c19;
             line-height: 1.2;
             text-transform: uppercase;
-            margin-top: 20px;
+            margin: 10px 0 0 0;
         }
 
         .ampersand {
@@ -54,12 +54,12 @@
             margin: 5px 0;
         }
 
-        /* Фотографія як витончена журнальна обкладинка */
+        /* Велике фото обкладинки */
         .cover-photo-container {
             width: 100%;
             max-width: 340px;
-            height: 50vh;
-            margin: 30px auto;
+            height: 52vh;
+            margin: 15px auto;
             box-shadow: 0 20px 40px rgba(0,0,0,0.07);
             border-radius: 4px;
             overflow: hidden;
@@ -79,6 +79,7 @@
             text-transform: uppercase;
             color: #8c7769;
             font-weight: 500;
+            margin-bottom: 10px;
         }
 
         .scroll-hint {
@@ -88,7 +89,6 @@
             color: #baaba0;
             animation: bounce 3s infinite;
             font-weight: 500;
-            margin-top: 20px;
         }
 
         @keyframes bounce {
@@ -96,65 +96,70 @@
             40% { transform: translateY(-5px); }
         }
 
-        /* ДРУГА СТОРІНКА ТА ІНШІ СЕКЦІЇ */
+        /* ЛІНІЯ РОЗДІЛЕННЯ СТОРІНОК */
         .divider {
             margin: 0 auto;
             width: 1px;
-            height: 80px;
+            height: 100px;
             background: linear-gradient(to bottom, #d9c3b4, transparent);
         }
 
+        /* ДРУГА СТОРІНКА — ЧИСТЕ ЗАПРОШЕННЯ */
+        .second-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+            box-sizing: border-box;
+        }
+
         .section {
-            padding: 80px 20px;
+            padding: 60px 20px;
             max-width: 600px;
             margin: 0 auto;
             box-sizing: border-box;
         }
 
-        /* Красивий текст запрошення */
+        /* БЛОК ДЛЯ ІМЕНІ ГОСТЯ (ЧИСТИЙ ТЕКСТ ІЗ ПОСИЛАННЯ) */
+        .guest-box {
+            display: none;
+            border-top: 1px solid rgba(140, 119, 105, 0.2);
+            border-bottom: 1px solid rgba(140, 119, 105, 0.2);
+            padding: 25px 30px;
+            margin-bottom: 40px;
+            width: 100%;
+            max-width: 360px;
+            box-sizing: border-box;
+        }
+
+        .guest-text-full {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            color: #211c19;
+            letter-spacing: 1px;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        /* Текст запрошення */
         .invitation-text {
             font-family: 'Playfair Display', serif;
-            font-size: 1.05rem;
+            font-size: 1.15rem;
             line-height: 2;
             color: #382f29;
             max-width: 500px;
-            margin: 0 auto 40px auto;
-            padding: 0 10px;
+            margin: 0 auto;
         }
 
         .highlight-text {
             font-style: italic;
             color: #8c7769;
             display: block;
-            margin-top: 15px;
+            margin-top: 25px;
             font-weight: 500;
-        }
-
-        /* Зона для імені гостя */
-        .guest-box {
-            display: none;
-            border-top: 1px solid rgba(140, 119, 105, 0.2);
-            border-bottom: 1px solid rgba(140, 119, 105, 0.2);
-            padding: 15px 25px;
-            margin: 40px auto;
-            max-width: 340px;
-        }
-
-        .guest-prefix {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
-            font-style: italic;
-            color: #8c7769;
-            margin-bottom: 5px;
-        }
-
-        .guest-name {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            font-weight: 400;
-            color: #211c19;
-            letter-spacing: 1px;
-            margin: 0;
         }
 
         .section-title {
@@ -268,7 +273,7 @@
 </head>
 <body>
 
-    <!-- ПЕРША СТОРІНКА (ОБКЛАДИНКА) -->
+    <!-- ПЕРША СТОРІНКА (ОБКЛАДИНКА З ФОТО) -->
     <div class="cover-page">
         <h1 class="main-names">Володимир <span class="ampersand">&</span> Діана</h1>
 
@@ -284,26 +289,26 @@
 
     <div class="divider"></div>
 
-    <!-- ДРУГА СТОРІНКА (САМЕ ЗАПРОШЕННЯ) -->
-    <div class="section">
-        <!-- Персональне звернення до гостей -->
+    <!-- ДРУГА СТОРІНКА (ЧИСТЕ ЗАПРОШЕННЯ З ВАШИМ ТЕКСТОМ) -->
+    <div class="second-page">
+        
+        <!-- Сюди вставиться ПОВНИЙ текст із посилання БЕЗ додавання слова "Дорогі" -->
         <div id="guestBox" class="guest-box">
-            <div class="guest-prefix">Дорогі</div>
-            <h2 id="guestSection" class="guest-name"></h2>
+            <h2 id="guestSection" class="guest-text-full"></h2>
         </div>
 
-        <!-- Ваш новий красивий текст -->
+        <!-- Красивий текст запрошення -->
         <div class="invitation-text">
             Цей непростий час нам вкотре нагадав, як важливо оберігати тих, хто поруч, не відкладати життя на потім, а цінувати коханих, рідних та друзів.
             <span class="highlight-text">Ми щиро хочемо розділити цей особливий день разом з вами!</span>
         </div>
         
-        <div class="scroll-hint">Гортайте далі ↓</div>
+        <div class="scroll-hint" style="margin-top: 60px;">Гортайте далі ↓</div>
     </div>
 
     <div class="divider"></div>
 
-    <!-- ТАЙМЕР ПОСТАВЛЕНО СЮДИ -->
+    <!-- ТАЙМЕР -->
     <div class="section">
         <div class="date-display">22 . 08 . 2026</div>
         <p style="letter-spacing: 2px; text-transform: uppercase; font-size: 0.75rem; color: #8c7769; font-weight: 500;">До початку нашого свята:</p>
@@ -395,13 +400,14 @@
                 const guestSection = document.getElementById('guestSection');
                 const guestBox = document.getElementById('guestBox');
                 
-                let cleanName = decodeURIComponent(guestName).replace(/Дорогі\s+/i, '');
+                // Декодуємо повний текст (наприклад: "Люба подруга Тетяна")
+                let fullText = decodeURIComponent(guestName);
                 
-                guestSection.innerText = cleanName;
+                guestSection.innerText = fullText;
                 guestBox.style.display = 'block';
             }
         }
-        getGuestName();
+        window.onload = getGuestName;
 
         const weddingDate = new Date("Aug 22, 2026 13:45:00").getTime();
         setInterval(function() {
