@@ -11,7 +11,7 @@
     <meta property="og:title" content="Запрошення на весілля">
     <meta property="og:description" content="Володимир & Діана">
 
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
@@ -23,9 +23,9 @@
         }
 
         .header {
-            padding: 100px 20px 80px 20px;
+            padding: 80px 20px 60px 20px;
             background-color: #fcfbfa;
-            min-height: 90vh;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -33,45 +33,79 @@
             box-sizing: border-box;
         }
 
-        /* Атмосферний вступний текст */
+        /* Головні імена — тепер строгі, журнальні та величні */
+        .main-names {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            color: #211c19;
+            line-height: 1.2;
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+        }
+
+        .ampersand {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-style: italic;
+            color: #8c7769;
+            margin: 5px 0;
+            display: block;
+        }
+
+        /* Атмосферний текст над фото */
         .intro-text {
             font-family: 'Playfair Display', serif;
-            font-size: 0.9rem;
-            line-height: 1.9;
-            max-width: 500px;
+            font-size: 0.85rem;
+            line-height: 1.8;
+            max-width: 450px;
             color: #544941;
-            margin: 0 auto 50px auto;
+            margin: 30px auto;
             font-style: italic;
             padding: 0 15px;
         }
 
-        /* Весільна монограма */
-        .monogram {
-            font-family: 'Playfair Display', serif;
-            font-size: 4.8rem;
-            font-weight: 400;
-            letter-spacing: 6px;
-            color: #382f29;
-            line-height: 1;
-            margin: 0 0 40px 0;
+        /* СТИЛЬНЕ ВЕЛИКЕ ФОТО */
+        .hero-photo-container {
+            width: 100%;
+            max-width: 340px;
+            margin: 20px auto;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+            border-radius: 4px;
+            overflow: hidden;
+            background-color: #ede6dc;
         }
 
-        /* Зона для імені гостя з лініями */
+        .hero-photo {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* ВІДОКРЕМЛЕНИЙ БЛОК ДЛЯ ІМЕНІ ГОСТЯ */
         .guest-box {
             display: none;
-            border-top: 1px solid rgba(140, 119, 105, 0.25);
-            border-bottom: 1px solid rgba(140, 119, 105, 0.25);
-            padding: 15px 30px;
-            margin: 10px auto 40px auto;
-            max-width: 400px;
+            border-top: 1px solid rgba(140, 119, 105, 0.2);
+            border-bottom: 1px solid rgba(140, 119, 105, 0.2);
+            padding: 12px 25px;
+            margin: 35px auto 25px auto;
+            max-width: 320px;
+        }
+
+        .guest-prefix {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-style: italic;
+            color: #8c7769;
+            margin-bottom: 5px;
         }
 
         .guest-name {
             font-family: 'Playfair Display', serif;
-            font-size: 1.7rem;
-            font-style: italic;
-            font-weight: 500;
-            color: #4a3e36;
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: #211c19;
             letter-spacing: 1px;
             margin: 0;
         }
@@ -80,20 +114,19 @@
         .wedding-label {
             font-family: 'Montserrat', sans-serif;
             font-size: 0.75rem;
-            letter-spacing: 12px;
+            letter-spacing: 10px;
             text-transform: uppercase;
             color: #8c7769;
-            margin-top: 20px;
+            margin-top: 15px;
             font-weight: 500;
         }
 
-        /* Елегантний та легкий вказівник прокрутки */
         .scroll-hint {
             font-size: 0.7rem;
             letter-spacing: 4px;
             text-transform: uppercase;
             color: #baaba0;
-            margin-top: 60px;
+            margin-top: 50px;
             animation: bounce 3s infinite;
             font-weight: 500;
         }
@@ -105,23 +138,23 @@
 
         /* Розділювач секцій */
         .divider {
-            margin: 50px auto;
+            margin: 40px auto;
             width: 1px;
-            height: 70px;
+            height: 60px;
             background: linear-gradient(to bottom, #d9c3b4, transparent);
         }
 
         .section {
-            padding: 60px 20px;
+            padding: 50px 20px;
             max-width: 600px;
             margin: 0 auto;
         }
 
         .section-title {
             font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
-            color: #382f29;
-            margin-bottom: 40px;
+            font-size: 2rem;
+            color: #211c19;
+            margin-bottom: 35px;
             font-weight: 400;
             letter-spacing: 1px;
         }
@@ -149,7 +182,7 @@
         .timer-num {
             font-family: 'Playfair Display', serif;
             font-size: 2.6rem;
-            color: #382f29;
+            color: #211c19;
             display: block;
         }
 
@@ -163,14 +196,14 @@
 
         /* Таймлайн */
         .timeline-item {
-            margin-bottom: 50px;
+            margin-bottom: 45px;
             text-align: center;
         }
 
         .time {
             font-family: 'Playfair Display', serif;
             font-size: 1.6rem;
-            color: #382f29;
+            color: #211c19;
             display: block;
             margin-bottom: 10px;
         }
@@ -212,15 +245,15 @@
         }
 
         .footer {
-            padding: 120px 20px;
+            padding: 100px 20px;
             background-color: #f5f3f0;
         }
 
         .footer-names {
             font-family: 'Playfair Display', serif;
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             letter-spacing: 3px;
-            color: #382f29;
+            color: #211c19;
             margin-top: 20px;
             text-transform: uppercase;
         }
@@ -230,21 +263,26 @@
 
     <!-- ГОЛОВНИЙ БЛОК -->
     <div class="header">
+        <!-- Ваші імена у новому строгому стилі журналу Vogue -->
+        <h1 class="main-names">Володимир <span class="ampersand">and</span> Діана</h1>
+
         <div class="intro-text">
             Цей непростий час нам вкотре нагадав, як важливо оберігати тих, хто поруч, не відкладати життя на потім, а цінувати коханих, рідних та друзів, разом відчувати безцінні моменти!
         </div>
 
-        <!-- Ініціали -->
-        <div class="monogram">В & Д</div>
+        <!-- Контейнер для вашої фотографії з оригінальною назвою -->
+        <div class="hero-photo-container">
+            <img src="IMG_5880.jpeg" alt="Володимир та Діана" class="hero-photo">
+        </div>
         
-        <!-- Відокремлена зона для імені гостя -->
+        <!-- Ідеально відокремлена зона для гостей під фото -->
         <div id="guestBox" class="guest-box">
+            <div class="guest-prefix">Дорогі</div>
             <h2 id="guestSection" class="guest-name"></h2>
         </div>
         
         <div class="wedding-label">Запрошення на весілля</div>
         
-        <!-- Вказівник прокрутки 1 -->
         <div class="scroll-hint">Гортайте далі ↓</div>
     </div>
 
@@ -270,7 +308,6 @@
             </div>
         </div>
         
-        <!-- Вказівник прокрутки 2 -->
         <div class="scroll-hint">Гортайте далі ↓</div>
     </div>
 
@@ -300,7 +337,6 @@
             <a href="https://maps.google.com" target="_blank" class="map-btn">Відкрити карту</a>
         </div>
         
-        <!-- Вказівник прокрутки 3 -->
         <div class="scroll-hint" style="margin-top: 40px;">Гортайте далі ↓</div>
     </div>
 
@@ -319,7 +355,6 @@
             <div class="circle" style="background-color: #000000;" title="Чорний класичний"></div>
         </div>
         
-        <!-- Вказівник прокрутки 4 -->
         <div class="scroll-hint" style="margin-top: 50px;">Гортайте далі ↓</div>
     </div>
 
@@ -345,7 +380,9 @@
                 const guestSection = document.getElementById('guestSection');
                 const guestBox = document.getElementById('guestBox');
                 
-                guestSection.innerText = decodeURIComponent(guestName);
+                let cleanName = decodeURIComponent(guestName).replace(/Дорогі\s+/i, '');
+                
+                guestSection.innerText = cleanName;
                 guestBox.style.display = 'block';
             }
         }
@@ -362,3 +399,4 @@
     </script>
 </body>
 </html>
+
