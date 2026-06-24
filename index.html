@@ -80,7 +80,7 @@
             color: #8c7769;
             font-weight: 500;
             margin-bottom: 12px;
-            padding-left: 12px; /* Для оптичного балансу через трекінг */
+            padding-left: 12px;
         }
 
         .scroll-hint {
@@ -98,12 +98,21 @@
             40% { transform: translateY(-5px); }
         }
 
-        /* ЛІНІЯ РОЗДІЛЕННЯ */
+        /* ЛІНІЯ РОЗДІЛЕННЯ ТА ДЕКОР */
         .divider {
-            margin: 0 auto;
+            margin: 40px auto;
             width: 1px;
-            height: 120px;
+            height: 100px;
             background: linear-gradient(to bottom, #e3d7cd, transparent);
+        }
+
+        .floral-deco {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #bca895;
+            margin: 20px 0;
+            opacity: 0.7;
+            letter-spacing: 4px;
         }
 
         /* ДРУГА СТОРІНКА */
@@ -113,12 +122,12 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 80px 20px;
+            padding: 60px 20px;
             box-sizing: border-box;
         }
 
         .section {
-            padding: 90px 20px;
+            padding: 70px 20px;
             max-width: 600px;
             margin: 0 auto;
             box-sizing: border-box;
@@ -130,7 +139,7 @@
             border-top: 1px solid rgba(140, 119, 105, 0.15);
             border-bottom: 1px solid rgba(140, 119, 105, 0.15);
             padding: 30px 20px;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
             width: 100%;
             max-width: 380px;
             box-sizing: border-box;
@@ -146,7 +155,7 @@
             line-height: 1.4;
         }
 
-        /* Вишуканий текст запрошення */
+        /* Текст запрошення */
         .invitation-text {
             font-family: 'Playfair Display', serif;
             font-size: 1.2rem;
@@ -170,7 +179,7 @@
             font-family: 'Playfair Display', serif;
             font-size: 2.2rem;
             color: #211c19;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
             font-weight: 400;
             letter-spacing: 2px;
         }
@@ -188,7 +197,7 @@
             display: flex;
             justify-content: center;
             gap: 30px;
-            margin: 50px 0;
+            margin: 40px 0;
         }
 
         .timer-block {
@@ -219,7 +228,7 @@
         }
 
         .timeline-item {
-            margin-bottom: 60px;
+            margin-bottom: 50px;
             text-align: center;
         }
 
@@ -282,7 +291,7 @@
             display: flex;
             justify-content: center;
             gap: 14px;
-            margin-top: 40px;
+            margin-top: 35px;
             flex-wrap: wrap;
         }
 
@@ -295,7 +304,7 @@
         }
 
         .footer {
-            padding: 120px 20px;
+            padding: 100px 20px;
             background-color: #f6f4f1;
         }
 
@@ -311,6 +320,7 @@
 </head>
 <body>
 
+    <!-- ПЕРША СТОРІНКА (ОБКЛАДИНКА З ФОТО) -->
     <div class="cover-page">
         <h1 class="main-names">Володимир <span class="ampersand">&</span> Діана</h1>
 
@@ -326,7 +336,9 @@
 
     <div class="divider"></div>
 
+    <!-- ДРУГА СТОРІНКА (ЗАПРОШЕННЯ) -->
     <div class="second-page">
+        <div class="floral-deco">🌿</div>
         <div id="guestBox" class="guest-box">
             <h2 id="guestSection" class="guest-text-full"></h2>
         </div>
@@ -341,6 +353,7 @@
 
     <div class="divider"></div>
 
+    <!-- ТАЙМЕР -->
     <div class="section">
         <div class="date-display">22 . 08 . 2026</div>
         <p style="letter-spacing: 3px; text-transform: uppercase; font-size: 0.7rem; color: #8c7769; font-weight: 600; margin-bottom: 0;">До початку нашого свята:</p>
@@ -365,7 +378,9 @@
 
     <div class="divider"></div>
 
+    <!-- ПРОГРАМА ДНЯ -->
     <div class="section">
+        <div class="floral-deco">✦ ✦ ✦</div>
         <h2 class="section-title">Програма дня</h2>
         
         <div class="timeline-container">
@@ -373,7 +388,7 @@
                 <span class="time">13:45</span>
                 <span class="event-title">Урочиста церемонія розпису</span>
                 <p class="event-details">Міський РАЦС<br>м. Житомир, Соборна площа, 1</p>
-                <a href="https://maps.app.goo.gl/w6Xg1TGr8vYc6Y4z6" target="_blank" class="map-btn">Открыть карту</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Міський+РАЦС+Житомир+Соборна+площа+1" target="_blank" class="map-btn">Відкрити карту</a>
             </div>
 
             <div class="timeline-item">
@@ -386,7 +401,7 @@
                 <span class="time">16:30</span>
                 <span class="event-title">Весільний банкет</span>
                 <p class="event-details">Ресторація «Міміно»<br>м. Житомир, вул. Жуйка, 3</p>
-                <a href="https://maps.app.goo.gl/H46qAn41gLpxnAL77" target="_blank" class="map-btn">Открыть карту</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Ресторан+Міміно+Житомир+вулиця+Жуйка+3" target="_blank" class="map-btn">Відкрити карту</a>
             </div>
         </div>
         
@@ -395,6 +410,7 @@
 
     <div class="divider"></div>
 
+    <!-- ДРЕС-КОД -->
     <div class="section">
         <h2 class="section-title">Дрес-код</h2>
         <p style="color: #4a403a; font-family: 'Playfair Display', serif; font-size: 1.1rem; font-style: italic; max-width: 480px; margin: 0 auto;">Нам буде надзвичайно приємно, якщо для нашого свята ви оберете вбрання у світлих пастельних тонах або класичному чорному кольорі.</p>
@@ -412,11 +428,14 @@
 
     <div class="divider"></div>
 
+    <!-- ПОБАЖАННЯ -->
     <div class="section">
         <h2 class="section-title">Маленьке побажання</h2>
         <p style="color: #4a403a; font-family: 'Playfair Display', serif; font-size: 1.1rem; font-style: italic; max-width: 480px; margin: 0 auto;">Будемо щиро вдячні, якщо замість квітів ви подаруєте пляшечку вашого улюбленого алкогольного напою для нашої сімейної колекції.</p>
+        <div class="floral-deco" style="margin-top: 40px;">🌿</div>
     </div>
 
+    <!-- ФУТЕР -->
     <div class="footer">
         З нетерпінням чекаємо на зустріч!<br>
         <div class="footer-names">Володимир & Діана</div>
