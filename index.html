@@ -106,12 +106,12 @@
             background: linear-gradient(to bottom, #e3d7cd, transparent);
         }
 
-        .floral-deco {
+        .heart-deco {
             font-family: 'Playfair Display', serif;
-            font-size: 1.4rem;
-            color: #bca895;
+            font-size: 1.3rem;
+            color: #bca895; /* Шляхетний колір, як у зірочок */
             margin: 20px 0;
-            opacity: 0.7;
+            opacity: 0.9;
             letter-spacing: 4px;
         }
 
@@ -320,7 +320,6 @@
 </head>
 <body>
 
-    <!-- ПЕРША СТОРІНКА (ОБКЛАДИНКА З ФОТО) -->
     <div class="cover-page">
         <h1 class="main-names">Володимир <span class="ampersand">&</span> Діана</h1>
 
@@ -336,9 +335,8 @@
 
     <div class="divider"></div>
 
-    <!-- ДРУГА СТОРІНКА (ЗАПРОШЕННЯ) -->
     <div class="second-page">
-        <div class="floral-deco">🌿</div>
+        <div class="heart-deco">♡</div>
         <div id="guestBox" class="guest-box">
             <h2 id="guestSection" class="guest-text-full"></h2>
         </div>
@@ -353,7 +351,6 @@
 
     <div class="divider"></div>
 
-    <!-- ТАЙМЕР -->
     <div class="section">
         <div class="date-display">22 . 08 . 2026</div>
         <p style="letter-spacing: 3px; text-transform: uppercase; font-size: 0.7rem; color: #8c7769; font-weight: 600; margin-bottom: 0;">До початку нашого свята:</p>
@@ -378,9 +375,8 @@
 
     <div class="divider"></div>
 
-    <!-- ПРОГРАМА ДНЯ -->
     <div class="section">
-        <div class="floral-deco">✦ ✦ ✦</div>
+        <div class="heart-deco">♡ ♡ ♡</div>
         <h2 class="section-title">Програма дня</h2>
         
         <div class="timeline-container">
@@ -388,7 +384,7 @@
                 <span class="time">13:45</span>
                 <span class="event-title">Урочиста церемонія розпису</span>
                 <p class="event-details">Міський РАЦС<br>м. Житомир, Соборна площа, 1</p>
-                <a href="https://www.google.com/maps/search/?api=1&query=Міський+РАЦС+Житомир+Соборна+площа+1" target="_blank" class="map-btn">Відкрити карту</a>
+                <a href="https://maps.google.com/?q=Міський+РАЦС+Житомир" target="_blank" class="map-btn">Відкрити карту</a>
             </div>
 
             <div class="timeline-item">
@@ -401,7 +397,7 @@
                 <span class="time">16:30</span>
                 <span class="event-title">Весільний банкет</span>
                 <p class="event-details">Ресторація «Міміно»<br>м. Житомир, вул. Жуйка, 3</p>
-                <a href="https://www.google.com/maps/search/?api=1&query=Ресторан+Міміно+Житомир+вулиця+Жуйка+3" target="_blank" class="map-btn">Відкрити карту</a>
+                <a href="https://maps.google.com/?q=Ресторан+Міміно+Житомир+Жуйка+3" target="_blank" class="map-btn">Відкрити карту</a>
             </div>
         </div>
         
@@ -410,7 +406,6 @@
 
     <div class="divider"></div>
 
-    <!-- ДРЕС-КОД -->
     <div class="section">
         <h2 class="section-title">Дрес-код</h2>
         <p style="color: #4a403a; font-family: 'Playfair Display', serif; font-size: 1.1rem; font-style: italic; max-width: 480px; margin: 0 auto;">Нам буде надзвичайно приємно, якщо для нашого свята ви оберете вбрання у світлих пастельних тонах або класичному чорному кольорі.</p>
@@ -428,20 +423,19 @@
 
     <div class="divider"></div>
 
-    <!-- ПОБАЖАННЯ -->
     <div class="section">
         <h2 class="section-title">Маленьке побажання</h2>
         <p style="color: #4a403a; font-family: 'Playfair Display', serif; font-size: 1.1rem; font-style: italic; max-width: 480px; margin: 0 auto;">Будемо щиро вдячні, якщо замість квітів ви подаруєте пляшечку вашого улюбленого алкогольного напою для нашої сімейної колекції.</p>
-        <div class="floral-deco" style="margin-top: 40px;">🌿</div>
+        <div class="heart-deco" style="margin-top: 40px;">★ ★ ★</div>
     </div>
 
-    <!-- ФУТЕР -->
     <div class="footer">
         З нетерпінням чекаємо на зустріч!<br>
         <div class="footer-names">Володимир & Діана</div>
     </div>
 
     <script>
+        // ОТРИМАННЯ ІМЕНІ ГОСТЯ
         function getGuestName() {
             const urlParams = new URLSearchParams(window.location.search);
             const guestName = urlParams.get('name');
@@ -455,6 +449,7 @@
         }
         window.onload = getGuestName;
 
+        // ТАЙМЕР
         const weddingDate = new Date("Aug 22, 2026 13:45:00").getTime();
         setInterval(function() {
             const now = new Date().getTime();
